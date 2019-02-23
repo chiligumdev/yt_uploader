@@ -2,4 +2,8 @@
   <h1>Upload Video</h1>
 </div>
 
-<p>Please <%= link_to 'authorize', '/auth/google_oauth2' %> via your Google account to continue.</p>
+<% if current_user %>
+  <%# TODO: create form partial %>
+<% else %>
+  <p>Please <%= link_to 'authorize', '/auth/google_oauth2' %> via your Google account to continue.</p>
+<% end %>
