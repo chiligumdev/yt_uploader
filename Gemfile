@@ -5,6 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+gem 'youtube_it', github: 'bodrovis/youtube_it'
 gem "figaro"
 gem 'omniauth-google-oauth2'
 gem 'bootstrap-sass'
