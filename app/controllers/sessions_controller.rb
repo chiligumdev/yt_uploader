@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
     user.token = auth['credentials']['token']
     user.name = auth['info']['name']
     user.save
-    sessions[:user_id] = user.id
+    session[:user_id] = user.id
     flash[:success] = "Welcome #{user.name}"
     redirect_to new_video_path
   end
