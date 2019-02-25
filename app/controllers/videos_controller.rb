@@ -12,7 +12,8 @@ class VideosController < ApplicationController
     temp_params = { title: params[:title], description: params[:description], category: 'Education', keywords: []}
     if current_user
       youtube = YouTubeIt::OAuth2Client.new(client_access_token: current_user.token, dev_key: ENV['GOOGLE_DEV_KEY'])
-      upload_info = youtube.upload_token(temp_params, "https://yt-uploader.herokuapp.com/videos/get_video_uid")
+      next_url = get_video_uid_url
+      upload_info = youtube.upload_token(temp_params, next_url)
 
       render json: {token: upload_info[:token], url: upload_info[:url]}
     else
