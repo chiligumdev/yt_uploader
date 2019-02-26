@@ -13,7 +13,7 @@ class VideosController < ApplicationController
     if current_user
       youtube = YouTubeIt::OAuth2Client.new(client_access_token: current_user.token, dev_key: ENV['GOOGLE_DEV_KEY'])
 
-      upload_info = youtube.upload_token(temp_params, app.get_video_uid_url)
+      upload_info = youtube.upload_token(temp_params, get_video_uid_url)
 
       render json: {token: upload_info[:token], url: upload_info[:url]}
     else
