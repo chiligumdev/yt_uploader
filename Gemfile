@@ -5,10 +5,11 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem 'youtube_it', github: 'bodrovis/youtube_it'
 gem "figaro"
 gem 'omniauth-google-oauth2'
-gem 'bootstrap-sass'
+gem 'yt', '~> 0.13.7'
+gem 'bootstrap-sass', '~> 3.3.0.1'
+gem 'autoprefixer-rails'
 
 # Jquery
 gem 'jquery-rails'
