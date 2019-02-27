@@ -8,7 +8,7 @@ class VideoObserver < ActiveRecord::Observer
     resource.deslikes = video.deslikes_count
     resource.published_at = video.published_at
   rescue
-    YT::Errors::NoItems
+    Yt::Errors::NoItems
     resource.title = ''
   end
 end
