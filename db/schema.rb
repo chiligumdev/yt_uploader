@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20190227164602) do
     t.string "uid"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["uid"], name: "index_users_on_uid", unique: true
   end
 
   create_table "video_uploads", force: :cascade do |t|
