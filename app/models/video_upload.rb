@@ -1,4 +1,4 @@
-class VideoUpload < ActiveRecord::Type::Object
+class VideoUpload < ActiveRecord::Base
   attribute :file, :string
   attribute :title, :string
   attribute :description, :text  
