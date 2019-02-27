@@ -11,7 +11,6 @@ gem 'yt', '~> 0.13.7'
 gem 'bootstrap-sass', '~> 3.3.0.1'
 gem 'autoprefixer-rails', '~> 7.2', '>= 7.2.5'
 gem 'rails-observers'
-gem 'active_type'
 
 # Jquery
 gem 'jquery-rails'
