@@ -1,9 +1,7 @@
-class VideoUpload < ApplicationRecord
-  # attribute :file, :string
-  # attribute :title, :string
-  # attribute :description, :text  
-
-  attr_accessor :file, :title, :description
+class VideoUpload < ActiveType::Record[Video]
+  attribute :file, :string
+  attribute :title, :string
+  attribute :description, :text  
 
   def upload(user)
     account = Yt::Account.new access_token: user.token
