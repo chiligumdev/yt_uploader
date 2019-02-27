@@ -5,7 +5,7 @@ class VideoUpload < ApplicationRecord
   attribute :description, :text
 
   validates :file, presence: true
-  validades :title, presence: true
+  validates :title, presence: true
 
   def upload(user)
     account = Yt::Account.new access_token: user.token
