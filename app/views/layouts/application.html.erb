@@ -12,7 +12,7 @@
     <div class="navbar navbar-inverse">
       <div class="container">
         <div class="navbar-header">
-          <%= link_to 'YT Uploader', root_path, class: 'navbar-brand' %>
+          <%= link_to 'YT APIv3', root_path, class: 'navbar-brand' %>
         </div>
         <ul class="nav navbar-nav">
           <li><%= link_to 'Videos', root_path %></li>
@@ -27,8 +27,13 @@
           <%= value %>
         </div>
       <% end %>
+    </div>
+    <%= yield %>
 
-      <%= yield %>
+    <div id="footer">
+      <div class="container">
+        <p class="text-muted">Created by <a href="http://chiligumvideos.com" target="_blank">Chiligum Videos</a></p>
+      </div>
     </div>
   </body>
 </html>
