@@ -1,7 +1,7 @@
-class VideoUpload < ApplicationRecord
-  # attribute :file, :string
-  # attribute :title, :string
-  # attribute :description, :text
+class VideoUpload < ActiveRecord::Type::Object
+  attribute :file, :string
+  attribute :title, :string
+  attribute :description, :text  
 
   validates :file, presence: true
   validates :title, presence: true
