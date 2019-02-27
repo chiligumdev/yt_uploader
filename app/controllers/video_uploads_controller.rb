@@ -1,7 +1,7 @@
 # video upload controller
 class VideoUploadsController < ApplicationController
   def new
-    @video = VideoUpload.new 
+    @video_upload = VideoUpload.new 
   end
 
   def create
