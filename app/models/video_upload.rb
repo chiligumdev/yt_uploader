@@ -1,10 +1,9 @@
-class VideoUpload < ActiveRecord::Base
-  attribute :file, :string
-  attribute :title, :string
-  attribute :description, :text  
+class VideoUpload < ApplicationRecord
+  # attribute :file, :string
+  # attribute :title, :string
+  # attribute :description, :text  
 
-  validates :file, presence: true
-  validates :title, presence: true
+  attr_accessible :file, :title, :description
 
   def upload(user)
     account = Yt::Account.new access_token: user.token
