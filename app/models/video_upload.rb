@@ -1,7 +1,7 @@
 class VideoUpload < ActiveType::Object
-  attribute :file, :varchar
-  attribute :title, :varchar
-  attribute :description, :varchar
+  attribute :file, :string
+  attribute :title, :string
+  attribute :description, :text
 
   def upload!(user)
     account = Yt::Account.new access_token: user.token
